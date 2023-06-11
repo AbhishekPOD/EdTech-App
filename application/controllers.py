@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask import render_template
 from flask import current_app as app
 from application.models import *
@@ -44,7 +44,7 @@ def fetch_grades():
     grades = Grade.query.all()
     grade_names = [grade.grade_name for grade in grades]
 
-    return grade_names, 200, {'Access-Control-Allow-Origin' : '*'}
+    return jsonify(grade_names), 200, {'Access-Control-Allow-Origin' : '*'}
 
 @app.route("/fetch-content/<subject_name>/<int:chapter_number>/")
 def fetch_content(subject_name, chapter_number):
