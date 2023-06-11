@@ -1,0 +1,25 @@
+Laws of geography:
+
+Waldo Tobler in front of the Newberry Library. Chicago, November 2007
+During the quantitative revolution, geography shifted to an empirical law-making (nomothetic) approach. Several laws of geography have been proposed since then, most notably by Waldo Tobler. In general, some dispute the entire concept of laws in geography and the social sciences. These criticisms have been addressed by Tobler and others, such as Michael Frank Goodchild. However, this is an ongoing source of debate in geography and is unlikely to be resolved anytime soon. Several laws have been proposed, and Tobler's first law of geography is the most generally accepted in geography. Some have argued that geographic laws do not need to be numbered. The existence of a first invites a second, and many have proposed themselves as that. It has also been proposed that Tobler's first law of geography should be moved to the second and replaced with another. A few of the proposed laws of geography are below:
+
+Tobler's first law of geography: "Everything is related to everything else, but near things are more related than distant"
+
+Tobler's second law of geography: "The phenomenon external to a geographic area of interest affects what goes on inside."
+
+Arbia's law of geography: "Everything is related to everything else, but things observed at a coarse spatial resolution are more related than things observed at a finer resolution."
+
+The uncertainty principle: "That the geographic world is infinitely complex and that any representation must therefore contain elements of uncertainty, that many definitions used in acquiring geographic data contain elements of vagueness, and that it is impossible to measure location on the Earth's surface exactly."
+
+
+Sub-disciplines:
+
+Geography is a branch of inquiry that focuses on spatial information on Earth. It is an extremely broad topic and can be broken down multiple ways. There have been several approaches to doing this spanning at least several centuries, including "four traditions of geography" and into distinct branches. The Four traditions of geography are often used to divide the different historical approaches theories geographers have taken to the discipline. In contrast, geography's branches describe contemporary applied geographical approaches.
+
+Four traditions of geography:
+
+Geography is an extremely broad field. Because of this, many view the various definitions of geography proposed over the decades as inadequate. To address this, William D. Pattison proposed the concept of the "Four traditions of Geography" in 1964. These traditions are the Spatial or Locational Tradition, the Man-Land or Human-Environment Interaction Tradition, the Area Studies or Regional Tradition, and the Earth Science Tradition. These concepts are broad sets of geography philosophies bound together within the discipline. They are one of many ways geographers organize the major sets of thoughts and philosophies within the discipline.
+
+Spatial or locational tradition:
+
+The spatial or locational tradition is concerned with employing quantitative methods to describe the spatial characteristics of a location. The spatial tradition seeks to use the spatial characteristics of a location or phenomena to understand and explain it. The contributors to this tradition were historically cartographers, but it now encompasses what we call technical geography and geographic information science.

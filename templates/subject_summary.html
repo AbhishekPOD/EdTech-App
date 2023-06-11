@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ subject_obj.subject_name }} - Grade {{grade_name}} 
+{% endblock title %}
+
+{% block style %}
+
+.expand {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  .chapters {
+    display: none;
+    padding: 10px;
+  }
+
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s;
+  }
+  
+  .rotate {
+    transform: rotate(180deg);
+  }
+  
+{% endblock style %}
+
+{% block body %}
+
+<div class="container">
+    <h3 class="text-center py-4 bg-secondary text-white my-3">{{ subject_obj.subject_name }}</h3>
+    <div style="background-color: #ffcc99; padding: 5px 20px; font-family: 'Arial', sans-serif; border: 3px solid violet">
+      <p style="color: #663300; font-size: 18px; font-weight: bold;"><span style = "color: black">Subject Overview : </span>{{ subject_obj.description }}</p>
+    </div>
+    <br>    
+    <div class="course">
+        <div class="expand bg-light p-3" onclick="toggleChapters(this)">
+          <span class="arrow fas fa-chevron-down"></span>
+          <b>Click to see the chapters</b>
+        </div>
+        <div class="chapters mt-1">
+          {% for chapter in all_chapters %}
+            <div class = "alert alert-info my-2">
+              <p>Chapter {{ loop.index }} : <a href = "/grade-{{ grade_name }}/subjects/{{ subject_obj.subject_name }}/chapter-{{ loop.index }}/">{{ chapter.chapter_name }}</a></p>
+            </div>
+          {% endfor %}
+          <!-- Chapters will be dynamically added here -->
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
+
+{% block js %}
+let f = false;
+function toggleChapters(element) {
+    var chapters = element.nextElementSibling;
+    var arrow = element.querySelector('.arrow');
+
+    chapters.style.display = 'block';
+    element.classList.add('active');
+    arrow.classList.add('rotate');
+    f = !f;
+
+    if (f == false)
+      if (chapters.style.display === 'none') {
+        chapters.style.display = 'block';
+        element.classList.add('active');
+        arrow.classList.add('rotate');
+      } else {
+        chapters.style.display = 'none';
+        element.classList.remove('active');
+        arrow.classList.remove('rotate');
+      }
+  }
+{% endblock js %}

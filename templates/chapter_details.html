@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ subject_obj.subject_name }} - Chapter {{ chapter_number }}
+{% endblock title %}
+
+{% block style %}
+
+<style>
+    .pre-container {
+    overflow-x: hidden;
+  }
+  
+  .pre-container pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: Arial, sans-serif;
+  }
+
+  .question-title {
+    color: #ffffff;
+    background-color: #343a40;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .score-title {
+    color: #fe0000;
+    background-color: #4ad996;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+</style>
+
+{% endblock style %}
+
+{% block body %}
+
+<div class="container">
+    <h3 class="text-center py-4 bg-secondary text-white my-3">{{ subject_obj.subject_name }} - Chapter {{ chapter_number }} ({{ chapter_obj.chapter_name }})</h3>
+    <div style="background-color: #ffcc99; padding: 5px 20px; font-family: 'Arial', sans-serif; border: 3px solid violet">
+      <p style="color: #663300; font-size: 18px; font-weight: bold;"><span style = "color: black">Subject Overview : </span>{{ subject_obj.description }}</p>
+    </div>
+    <br>    
+    
+    <div id = "app">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ps-2">
+            <!-- <a class="navbar-brand" href="#">Ed-Tech</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <router-link to="/" class="nav-link">Chapter Content</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link to="/youtube-video" class="nav-link">YouTube Video</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link to="/quiz" class="nav-link">Quiz</router-link>
+                </li>
+            </ul>
+            </div>
+        </nav>
+
+      <div class="container mt-4">
+        <router-view></router-view>
+      </div>
+    </div>
+
+</div>
+
+{% endblock body %}
+
+{% block js %}
+
+    const chapter_title = {{ chapter_obj.chapter_name|tojson }}
+    const chapter_author = {{ chapter_obj.chapter_author|tojson }}
+    const subject_name = {{ subject_obj.subject_name|tojson }}
+    const ChapterContent = {
+        template: `
+            <div>
+              <blockquote class="blockquote">
+                <h3 class="mb-0">[[ chapter_title ]]</h3> <br>
+                <footer class="blockquote-footer">- by <cite title="Source Title">[[ chapter_author ]]</cite></footer>
+              </blockquote>
+
+              <img :src = "image_src">
+              <div class = "pre-container">
+                <pre>[[ content ]]</pre>
+              </div>
+            </div>
+        `,
+        computed : {
+            image_src : function () {
+                url_components = String(this.currentURL).split("/");
+                chapter_number = url_components.at(-3).split("-").at(-1);
+                return "/static/subjects/" + subject_name + "/chapter" + chapter_number + ".png";
+            }
+        },
+        data: function () {
+          return {
+            chapter_title: "",
+            chapter_author: "",
+            currentURL : "",
+            content : ""
+          };
+        },
+        delimiters: ['[[', ']]'],
+        mounted() {
+          this.currentURL = window.location.href;
+      
+          this.chapter_title = chapter_title;
+          this.chapter_author = chapter_author;
+      
+          url_components = String(this.currentURL).split("/");
+          chapter_number = url_components.at(-3).split("-").at(-1);
+
+          fetch("/fetch-content/" + subject_name + "/" + chapter_number
+          ).then(response => response.json()
+          ).then(data => this.content = data.content
+          ).catch(error => console.log("Error:", error));
+        },
+      };
+      
+
+    const YouTubeVideo = {
+      template: `<div>
+                    <h3>YouTube Video:</h3>
+                    <iframe width="560" height="315" :src="youtube_link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <br>
+                    <p> Hope you will enjoy the learning experience from the visuals...</p>
+                </div>
+            `,
+        data : function () {
+            return {
+                youtube_link : ""
+            }
+        },
+        delimiters: ['[[', ']]'],
+        mounted() {
+          fetch("/fetch-youtube-link/" + subject_name + "/" + chapter_title
+          ).then(response => response.json()
+          ).then(data => this.youtube_link = data.content
+          ).catch(error => console.log("Error:", error));
+        } 
+    }
+
+    const Quiz = {
+      template: `<div class="container">
+                    <h1>Welcome to the Quiz !!</h1>
+                    <div v-for="(question, index) in questions" :key="index" class="my-4">
+                      <h3 class="question-title">Question [[ index + 1 ]]: [[ question.text ]]</h3>
+                      <br>
+                      <ul class="list-group">
+                        <li v-for="(option, optionIndex) in question.options" :key="optionIndex" class="list-group-item">
+                          <label class="form-check-label">
+                            <input type="radio" :name="'question-' + index" :value="option" v-model="user_answers[index]" class="form-check-input">
+                            [[ option ]]
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                    <button @click="submitQuiz" class="btn btn-primary mb-3">Submit</button>
+                    <div v-if="showResult">
+                      <h2 class = "score-title">Your Score: [[ score ]] / [[ questions.length ]]</h2>
+                    </div>
+                  </div>      
+              `,
+      delimiters: ['[[', ']]'],
+      data : function () {
+        return {
+          questions: [],
+          user_answers: [],
+          showResult: false,
+          score: 0
+        }
+      },
+      methods: {
+        submitQuiz() {
+          this.score = this.calculateScore();
+          swal.fire({
+            title: "Your Quiz Score : " + this.score + " / " + this.questions.length,
+            html: "Why don't you play the game again !!",
+            icon: 'success',
+            showCancelButton: false,
+            confirmButtonText: 'Play Again',
+          }).then((result) => {
+            if (result.isConfirmed) {
+              this.clearSelection();
+            } else {
+            }
+          });
+          
+          this.showResult = true;
+        },
+        calculateScore() {
+          let score = 0;
+          for (let i = 0; i < this.questions.length; i++) {
+            if (this.user_answers[i] === this.questions[i].correct_answer) {
+              score++;
+            }
+          }
+          return score;
+        },
+        clearSelection() {
+          this.user_answers = [];
+        }
+      },
+      mounted() {
+        fetch("/fetch-quiz/" + subject_name + "/" + chapter_title
+        ).then(response => response.json()
+        ).then(data => {
+          this.questions = data.questions;
+          this.user_answers = Array(this.questions.length).fill('');
+        }).catch(error => console.log("Error:", error));
+      } 
+    }
+
+    const routes = [
+      { path: '/', component: ChapterContent },
+      { path: '/youtube-video', component: YouTubeVideo },
+      { path: '/quiz', component: Quiz }
+    ]
+
+    const router = new VueRouter({
+      routes
+    })
+
+    const app = new Vue({
+      el : "#app",
+      delimiters: ['[[', ']]'],
+      router
+    })
+
+
+{% endblock js %}

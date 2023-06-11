@@ -1,0 +1,41 @@
+Calculus Definition:
+
+Calculus, a branch of Mathematics, developed by Newton and Leibniz, deals with the study of the rate of change. Calculus Math is generally used in Mathematical models to obtain optimal solutions. It helps us to understand the changes between the values which are related by a function. Calculus Math mainly focused on some important topics such as differentiation, integration, limits, functions, and so on.
+
+Calculus Mathematics is broadly classified into two different such:
+
+1. Differential Calculus
+2. Integral Calculus
+
+Both the differential and integral calculus deals with the impact on the function of a slight change in the independent variable as it leads to zero. Both differential and integral calculus serves as a foundation for the higher branch of Mathematics known as “Analysis”. Calculus Mathematics plays a vital role in modern Physics as well as in Science and technology.
+
+What is the Meaning of Calculus?
+
+Calculus means the part of maths that deals with the properties of derivatives and integrals of quantities such as area, volume, velocity, acceleration, etc., by processes initially dependent on the summation of infinitesimal differences. It helps in determining the changes between the values that are related to the functions.
+
+
+Basic Calculus:
+
+Basic Calculus is the study of differentiation and integration. Both concepts are based on the idea of limits and functions. Some concepts, like continuity, exponents, are the foundation of advanced calculus. Basic calculus explains about the two different types of calculus called “Differential Calculus” and “Integral Calculus”. Differential Calculus helps to find the rate of change of a quantity, whereas integral calculus helps to find the quantity when the rate of change is known.
+
+Differential Calculus Basics:
+
+Differential Calculus is concerned with the problems of finding the rate of change of a function with respect to the other variables. To get the optimal solution, derivatives are used to find the maxima and minima values of a function. Differential calculus arises from the study of the limit of a quotient. It deals with variables such as x and y, functions f(x), and the corresponding changes in the variables x and y. The symbol dy and dx are called differentials. The process of finding the derivatives is called differentiation. The derivative of a function is represented by dy/dx or f’ (x). It means that the function is the derivative of y with respect to the variable x. Let us discuss some of the important topics covered in the basic differential calculus.
+
+Advanced Calculus:
+
+Advanced Calculus includes some topics such as infinite series, power series, and so on which are all just the application of the principles of some basic calculus topics such as differentiation, derivatives, rate of change and o on. The important areas which are necessary for advanced calculus are vector spaces, matrices, linear transformation. Advanced Calculus helps us to gain knowledge on a few important concepts such as
+
+1. Quadratic forms
+2. Generalized Stokes theorem
+3. Vector fields as derivatives
+4. Integration of forms
+5. Multilinear algebra
+6. Continuous differentiability
+7. Tangent space and normal space via gradients
+8. Dual space and dual basis
+9. Critical point analysis for multivariate functions, etc.
+
+Applications of Calculus:
+
+Calculus is a Mathematical model, that helps us to analyze a system to find an optimal solution to predict the future. In real life, concepts of calculus play a major role either it is related to solve the area of complicated shapes, safety of vehicles, evaluating survey data for business planning, credit card payment records, or finding the changing conditions of a system affect us, etc. Calculus is a language of physicians, economists, biologists, architects, medical experts, statisticians and it is often used by them. For example, Architects and engineers use concepts of calculus to determine the size and shape of the curves to design bridges, roads and tunnels, etc. Using Calculus, some of the concepts are beautifully modelled, such as birth and death rates, radioactive decay, reaction rates, heat and light, motion, electricity, etc.

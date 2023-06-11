@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}
+B2C Ed-Tech Website
+{% endblock title %}
+
+{% block body %}
+
+  <div class="jumbotron text-center mt-3">
+    <h1>Welcome to our Ed-Tech Platform</h1>
+    <p>Learn, Grow, and Succeed with our wide range of courses.</p>
+    <h3 class="text-center py-4 bg-secondary text-white">Some Top Course Offerings</h3>
+  </div>
+
+  <div class="container mb-3">
+    <div class="row my-3">
+        <div class="card col-md-4">
+            <img src="{{url_for('static', filename = 'subjects/maths.png')}}" class="card-img-top my-2" width = "200px" height = "200px" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Mathematics</h5>
+              <p class="card-text">Mathematics is the study of numbers, quantities, shapes, and patterns. It involves logical reasoning and problem-solving skills to understand and explain the fundamental principles of the universe.</p>
+              <div class="d-flex justify-content-center mt-auto">
+                <a href="/grade-5/subjects/Mathematics" class="btn btn-primary btn-md">See Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4">
+            <img src="{{url_for('static', filename = 'subjects/history.png')}}" class="card-img-top my-2" width = "200px" height = "200px" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">History</h5>
+              <p class="card-text">History is the study of past events, cultures, and civilizations. It explores the development of human societies, their achievements, conflicts, and the impact they have had on shaping the present world.</p>
+              <div class="d-flex justify-content-center mt-auto">
+                <a href="/grade-5/subjects/History" class="btn btn-primary btn-md">See Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4">
+            <img src="{{url_for('static', filename = 'subjects/geography.png')}}" class="card-img-top my-2" width = "200px" height = "200px" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Geography</h5>
+              <p class="card-text">Geography is the study of the Earth's physical features, climate, and the distribution of plants, animals, and human populations. It explores the relationships between people and their environments, including the study of landscapes, regions, and natural resources.</p>
+              <div class="d-flex justify-content-center mt-auto">
+                <a href="/grade-5/subjects/Geography" class="btn btn-primary btn-md">See Details</a>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="row">
+      <div class="card col-md-4">
+          <img src="{{url_for('static', filename = 'subjects/physics.png')}}" class="card-img-top my-2" width = "200px" height = "200px" alt="...">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Physics</h5>
+            <p class="card-text">Physics is the scientific study of matter, energy, motion, and the fundamental laws that govern the universe. It explores the behavior of particles, forces, and the principles underlying phenomena like electricity, magnetism, gravity, and quantum mechanics.</p>
+            <div class="d-flex justify-content-center mt-auto">
+              <a href="/grade-5/subjects/Physics" class="btn btn-primary btn-md">See Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card col-md-4">
+          <img src="{{url_for('static', filename = 'subjects/chemistry.png')}}" class="card-img-top my-2" width = "200px" height = "200px" alt="...">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Chemistry</h5>
+            <p class="card-text">Chemistry is the branch of science that deals with the composition, structure, properties, and reactions of substances. It explores the nature of matter and its transformations, studying elements, compounds, and their interactions to understand the world at a molecular level.</p>
+            <div class="d-flex justify-content-center mt-auto">
+              <a href="/grade-5/subjects/Chemistry" class="btn btn-primary btn-md">See Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card col-md-4">
+          <img src="{{url_for('static', filename = 'subjects/biology.png')}}" class="card-img-top my-2" width = "200px" height = "200px" alt="...">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Biology</h5>
+            <p class="card-text">Biology is the study of living organisms, their structure, function, evolution, and interactions with their environment. It encompasses the exploration of life processes, such as cellular biology, genetics, ecology, and the diversity of species on Earth.</p>
+            <div class="d-flex justify-content-center mt-auto">
+              <a href="/grade-5/subjects/Biology" class="btn btn-primary btn-md">See Details</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+{% endblock body %}  

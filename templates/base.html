@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+    <title>{% block title %} {% endblock title %}</title>
+
+    <style>
+
+        html, body {
+            height: 100%;
+        }
+
+        .wrapper {
+            min-height: 90%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer {
+          background-color: #f8f9fa;
+          padding: 20px 0;
+          text-align: center;
+          margin-top: auto;
+        }
+
+        .dark-footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+    </style>
+    <style>
+    {% block style %} {% endblock style %}
+  </style>
+</head>
+<body>
+
+    <div class = "wrapper">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark ps-2">
+          <a class="navbar-brand" href="/">Ed-Tech</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item" onmouseleave="hideCoursesDropdown()">
+                <a class="nav-link" href="#" onmouseover="fetchAndShowCourses()" onclick="toggleCoursesDropdown()">Grades</a>
+                <div class="dropdown-menu" id="coursesDropdown" onmouseover="showCoursesDropdown()" onmouseleave="hideCoursesDropdown()">
+                  <!-- Dropdown menu content here -->
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact-us">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      {% block body %}
+      <!-- Add the body content here -->
+      {% endblock body %}
+    </div>
+
+    <footer class="footer dark-footer">
+        <div class="container">
+          <span>&copy; 2023 B2C Ed-Tech. All rights reserved.</span>
+        </div>
+    </footer>
+
+</body>
+<script>
+
+function toggleCoursesDropdown() {
+  var coursesDropdown = document.getElementById("coursesDropdown");
+  if (coursesDropdown.style.display === "none") {
+    showCoursesDropdown();
+  } else {
+    hideCoursesDropdown();
+  }
+}
+
+function showCoursesDropdown() {
+  var coursesDropdown = document.getElementById("coursesDropdown");
+  coursesDropdown.style.display = "block";
+}
+
+function hideCoursesDropdown() {
+  var coursesDropdown = document.getElementById("coursesDropdown");
+  coursesDropdown.style.display = "none";
+}
+
+
+
+  function fetchAndShowCourses() {
+      fetch('/fetch-grades')
+        .then(response => response.json())
+        .then(data => {
+          const dropdown = document.getElementById("coursesDropdown");
+          dropdown.innerHTML = ''; // Clear previous options
+
+          data.forEach(option => {
+            const optionElement = document.createElement("a");
+            optionElement.classList.add("dropdown-item");
+            optionElement.textContent = option;
+            optionElement.href = "/grade-" + String(option) + "/subjects"; // Set the href attribute
+            dropdown.appendChild(optionElement);
+          });
+          dropdown.style.display = "block"; // Show the dropdown menu
+        })
+        .catch(error => console.error(error));
+
+    // const dropdown = document.getElementById("coursesDropdown");
+    // dropdown.innerHTML = ''; // Clear previous options
+
+    // const optionElement1 = document.createElement("a");
+    // optionElement1.classList.add("dropdown-item");
+    // optionElement1.textContent = "Grade 1";
+    // dropdown.appendChild(optionElement1);
+
+    // const optionElement2 = document.createElement("a");
+    // optionElement2.classList.add("dropdown-item");
+    // optionElement2.textContent = "Grade 2";
+    // dropdown.appendChild(optionElement2);
+
+    // const optionElement3 = document.createElement("a");
+    // optionElement3.classList.add("dropdown-item");
+    // optionElement3.textContent = "Grade 3";
+    // dropdown.appendChild(optionElement3);
+
+    // dropdown.style.display = "block"; // Show the dropdown menu
+  }
+
+  function hideCoursesDropdown() {
+  var coursesDropdown = document.getElementById("coursesDropdown");
+  coursesDropdown.style.display = "none";
+  }
+</script>
+
+<script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+<script src="https://unpkg.com/vue-router@3.5.1/dist/vue-router.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+<script>
+{% block js %} 
+{% endblock js %}
+</script>
+
+</html>

@@ -1,0 +1,78 @@
+Definition:
+
+A triangle is a type of polygon, which has three sides, and the two sides are joined end to end is called the vertex of the triangle. An angle is formed between two sides. This is one of the important parts of geometry. 
+
+Some major concepts, such as Pythagoras theorem and trigonometry, are dependent on triangle properties. A triangle has different types based on its angles and sides. 
+
+Shape of Triangle:
+
+Triangle is a closed two-dimensional shape. It is a three-sided polygon. All sides are made of straight lines. The point where two straight lines join is the vertex. Hence, the triangle has three vertices. Each vertex forms an angle.
+
+Angles of Triangle:
+
+There are three angles in a triangle. These angles are formed by two sides of the triangle, which meets at a common point, known as the vertex. The sum of all three interior angles is equal to 180 degrees. 
+
+If we extend the side length outwards, then it forms an exterior angle. The sum of consecutive interior and exterior angles of a triangle is supplementary. 
+
+Let us say, ∠1, ∠2 and ∠3 are the interior angles of a triangle. When we extend the sides of the triangle in the outward direction, then the three exterior angles formed are ∠4, ∠5 and ∠6, which are consecutive to ∠1, ∠2 and ∠3, respectively.
+
+Hence, 
+
+∠1 + ∠4 = 180°   ……(i)
+
+∠2 + ∠5 = 180°  …..(ii)
+
+∠3 + ∠6 = 180°  …..(iii)
+
+If we add the above three equations, we get;
+
+∠1+∠2+∠3+∠4+∠5+∠6 = 180° + 180° + 180°
+
+Now, by angle sum property we know, 
+
+∠1+∠2+∠3 = 180°
+
+Therefore, 
+
+180 + ∠4+∠5+∠6 = 180° + 180° + 180°
+
+∠4+∠5+∠6 = 360°
+
+This proves that the sum of the exterior angles of a triangle is equal to 360 degrees.
+
+Properties:
+
+Each and every shape in Maths has some properties which distinguish them from each other. Let us discuss here some of the properties of triangles.
+
+1. A triangle has three sides and three angles.
+2. The sum of the angles of a triangle is always 180 degrees.
+3. The exterior angles of a triangle always add up to 360 degrees.
+4. The sum of consecutive interior and exterior angle is supplementary.
+5. The sum of the lengths of any two sides of a triangle is greater than the length of the third side. Similarly, the difference between the lengths of any two sides of a triangle is less than the length of the third side.
+6. The shortest side is always opposite the smallest interior angle. Similarly, the longest side is always opposite the largest interior angle.
+
+Types:
+
+On the basis of length of the sides, triangles are classified into three categories:
+
+1. Scalene Triangle
+2. Isosceles Triangle
+3. Equilateral Triangle
+
+On the basis of measurement of the angles, triangles are classified into three categories:
+
+1. Acute Angle Triangle
+2. Right Angle Triangle
+3. Obtuse Angle Triangle
+
+Scalene Triangle:
+
+A scalene triangle is a type of triangle, in which all the three sides have different side measures. Due to this, the three angles are also different from each other.
+
+Isosceles Triangle:
+
+In an isosceles triangle, two sides have equal length. The two angles opposite to the two equal sides are also equal to each other.
+
+Equilateral Triangle:
+
+An equilateral triangle has all three sides equal to each other. Due to this all the internal angles are of equal degrees, i.e. each of the angles is 60°

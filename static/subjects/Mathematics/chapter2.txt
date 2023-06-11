@@ -1,0 +1,67 @@
+What is Algebra?
+
+Algebra helps solve the mathematical equations and allows to derive unknown quantities, like the bank interest, proportions, percentages. We can use the variables in the algebra to represent the unknown quantities that are coupled in such a way as to rewrite the equations.
+
+The algebraic formulas are used in our daily lives to find the distance and volume of containers and figure out the sales prices as and when needed. Algebra is constructive in stating a mathematical equation and relationship by using letters or other symbols representing the entities. The unknown quantities in the equation can be solved through algebra.
+
+Some of the main topics coming under algebra include Basics of algebra, exponents, simplification of algebraic expressions, polynomials, quadratic equations, etc.
+
+Branches of Algebra:
+
+As it is known that,  algebra is the concept based on unknown values called variables. The important concept of algebra is equations. It follows various rules to perform arithmetic operations. The rules are used to make sense of sets of data that involve two or more variables. It is used to analyse many things around us. You will probably use the concept of algebra without realising it. Algebra is divided into different sub-branches such as elementary algebra, advanced algebra, abstract algebra, linear algebra, and commutative algebra.
+
+
+Algebra 1 or Elementary Algebra:
+
+Elementary Algebra covers the traditional topics studied in a modern elementary algebra course. Arithmetic includes numbers along with mathematical operations like +,  -,  x,  ÷. But in algebra, the numbers are often represented by the symbols and are called variables such as x, a, n, y. It also allows the common formulation of the laws of arithmetic such as, a + b = b + a and it is the first step that shows the systematic exploration of all the properties of a system of real numbers.
+
+The concepts coming under elementary algebra include variables, evaluating expressions and equations, properties of equalities and inequalities, solving the algebraic equations and linear equations having one or two variables, etc.
+
+Algebra 2 or Advanced Algebra:
+
+This is the intermediate level of Algebra. This algebra has a high level of equations to solve as compared to pre-algebra. Advanced algebra will help you to go through the other parts of algebra such as:
+
+1. Equations with inequalities
+2. Matrices
+3. Solving system of linear equations
+4. Graphing of functions and linear equations
+5. Conic sections
+6. Polynomial Equation
+7. Quadratic Functions with inequalities
+8. Polynomials and expressions with radicals
+9. Sequences and series
+10. Rational expressions
+11. Trigonometry
+12. Discrete mathematics and probability
+
+Abstract Algebra:
+
+Abstract algebra is one of the divisions in algebra which discovers the truths relating to algebraic systems independent of the specific nature of some operations. These operations, in specific cases, have certain properties. Thus we can conclude some consequences of such properties. Hence this branch of mathematics called abstract algebra.
+
+Abstract algebra deals with algebraic structures like the fields, groups, modules, rings, lattices, vector spaces, etc.
+
+The concepts of the abstract algebra are below-
+
+1. Sets – Sets is defined as the collection of the objects that are determined by some specific property for a set. For example – A set of all the 2×2 matrices, the set of two-dimensional vectors present in the plane and different forms of finite groups.
+
+2. Binary Operations – When the concept of addition is conceptualized, it gives the binary operations. The concept of all the binary operations will be meaningless without a set.
+
+3. Identity Element – The numbers 0 and 1 are conceptualized to give the idea of an identity element for a specific operation. Here, 0 is called the identity element for the addition operation, whereas 1 is called the identity element for the multiplication operation.
+
+4. Inverse Elements – The idea of Inverse elements comes up with a negative number. For addition, we write “-a” as the inverse of “a” and for the multiplication, the inverse form is written as “a-1″.
+
+5. Associativity – When integers are added, there is a property known as associativity in which the grouping up of numbers added does not affect the sum. Consider an example, (3 + 2) + 4 = 3 + (2 + 4)
+
+Linear Algebra:
+
+Linear algebra is a branch of algebra that applies to both applied as well as pure mathematics. It deals with the linear mappings between the vector spaces. It also deals with the study of planes and lines. It is the study of linear sets of equations with transformation properties. It is almost used in all areas of Mathematics. It concerns the linear equations for the linear functions with their representation in vector spaces and matrices. The important topics covered in linear algebra are as follows:
+
+1. Linear equations
+2. Vector Spaces
+3. Relations
+4. Matrices and matrix decomposition
+5. Relations and Computations
+
+Commutative algebra:
+
+Commutative algebra is one of the branches of algebra that studies the commutative rings and their ideals. The algebraic number theory, as well as the algebraic geometry, depends on commutative algebra. It includes rings of algebraic integers, polynomial rings, and so on. Many other mathematics areas draw upon commutative algebra in different ways, such as differential topology, invariant theory, order theory, and general topology. It has occupied a remarkable role in modern pure mathematics.
