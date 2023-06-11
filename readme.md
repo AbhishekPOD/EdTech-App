@@ -2,6 +2,8 @@
 
 An EdTech web app to provide and teach contents to kids in a fun and engaging way. The app consists of lessons, videos, images, and quizzes for the kids to learn themselves and enjoy the learning.
 
+Live Application Link: [abhishekpod.pythonanywhere.com/](http://abhishekpod.pythonanywhere.com/)
+
 ## How to run the app:
 
 1. Clone the Github repository using the command below:
