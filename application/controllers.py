@@ -50,7 +50,7 @@ def fetch_grades():
 def fetch_content(subject_name, chapter_number):
     all_chapter_objs = Chapter.query.filter_by(subject_name = subject_name).all()
     chapter_obj = all_chapter_objs[int(chapter_number)-1]
-    with open("static/subjects/" + subject_name + "/chapter" + str(chapter_number) + ".txt", "r", encoding="utf-8") as f:
+    with open("../static/subjects/" + subject_name + "/chapter" + str(chapter_number) + ".txt", "r", encoding="utf-8") as f:
         chapter_content = f.read()
     
     return {
