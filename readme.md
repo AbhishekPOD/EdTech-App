@@ -1,4 +1,25 @@
+## B2C Ed-Tech App
 
+An EdTech web app to provide and teach contents to kids in a fun and engaging way. The app consists of lessons, videos, images, and quizzes for the kids to learn themselves and enjoy the learning.
+
+## How to run the app:
+
+1. Clone the Github repository using the command below:
+```
+git clone https://github.com/AbhishekPOD/EdTech-App.git
+```
+
+2. Install all the Python depencies in the current environment (use virtual environment, if needed). Run the below command to install all the depencies:
+```
+pip install -r requirements.txt
+```
+
+3. Once, the dependencies are successfully installed, run the app using the below command:
+```
+python main.py
+```
+
+## Project Tree
 
 ```
 Ed-Tech App
